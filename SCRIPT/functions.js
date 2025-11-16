@@ -15,7 +15,11 @@ function convertirKelvin(tc) {
 export function verificarTemp(){
     let n;
     do {
-        n = parseInt(input("Ingrese la temperatura en celsius "));
+        n = Number(input("Ingrese la temperatura en celsius "));
+        console.log(isNaN(n));
+        if (isNaN(n)){
+            console.log("Texto no es valido, ingresa temperatura: ");
+        }
     } while(isNaN(n));
 
     console.log("Grados Kelvin: ", convertirKelvin(n));
